@@ -1,14 +1,37 @@
-# API REST de Sistema de Créditos (SNPP)
+# SNPP - Sistema de Gestión de Créditos
 
-Esta API REST permite la gestión integral de un sistema de créditos financieros, incluyendo el control de clientes, productos, contratos, créditos y pagos.
+API REST para la gestión de un sistema de créditos financieros, incluyendo **clientes, productos, créditos, contratos y pagos**.
 
-## 🚀 Tecnologías
-* Java / Spring Boot
-* OpenAPI / Swagger UI (Documentación interactiva)
+## 🚀 Servidor
+
+La aplicación se ejecuta localmente en:
+
+**http://localhost:8082/snpp**
+
+## 📚 Documentación de la API
+
+La documentación interactiva está disponible mediante **Swagger UI**:
+
+**http://localhost:8082/snpp/swagger-ui/index.html**
+
+Desde Swagger es posible consultar los endpoints, probar las operaciones y visualizar los esquemas de petición y respuesta.
 
 ---
 
-## 📌 Base URL
+# 📌 Módulos de la API
+
+## 💰 Pagos
+
+Gestión de los pagos asociados a créditos.
+
+| Método | Endpoint | Descripción |
+|---|---|---|
+| `GET` | `/api/pagos` | Listar todos los pagos |
+| `POST` | `/api/pagos` | Registrar un nuevo pago |
+| `GET` | `/api/pagos/{id}` | Buscar un pago por ID |
+| `DELETE` | `/api/pagos/{id}` | Eliminar un pago |
+
+### Ejemplo
 
 ```http
-http://localhost:8082/snpp
+GET http://localhost:8082/snpp/api/pagos
